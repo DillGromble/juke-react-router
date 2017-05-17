@@ -1,5 +1,6 @@
 import React from 'react';
 import Songs from '../components/Songs';
+import Redirect from 'react-router';
 
 class Album extends React.Component {
 
@@ -8,9 +9,11 @@ class Album extends React.Component {
   }
 
   componentDidMount() {
-    const albumId = this.props.routeParams.albumId;
-    const selectAlbum = this.props.selectAlbum;
-    selectAlbum(albumId)
+
+      const albumId = this.props.routeParams.albumId;
+      const selectAlbum = this.props.selectAlbum;
+      selectAlbum(albumId)
+
   }
 
   render() {
